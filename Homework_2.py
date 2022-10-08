@@ -1,8 +1,12 @@
 from datetime import datetime
 from tqdm import tqdm
 
-print("Введите название файла:")
-f = input()
+f = None
+try:
+    print("Введите название файла:")
+    f = input()
+except EOFError as e:
+    print(e)
 with open(f) as file:
     file_ = file.read().split(' ')
 line = [int(item) for item in file_]
