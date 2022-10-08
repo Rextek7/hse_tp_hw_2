@@ -1,1 +1,16 @@
+name: my-tests
 
+
+on:
+  push:
+    branches: ["master"]
+      
+jobs:
+  test_my_code:
+    runs-on   : ubuntu-latest
+    steps     :
+      - name   : Git-Clone-my-repo
+        uses   : actions/checkout@v3
+      - run    : |
+         cd $GITHUB_WORKSPACE
+         python3 -m unittest test_tz2.Tests
