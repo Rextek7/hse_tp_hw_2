@@ -1,10 +1,11 @@
 from datetime import datetime
 
 print("Введите название файла:")
-try:
-    f = input()
-except EOFError:
-    break
+while True:
+    try:
+        f = input()
+    except EOFError:
+        break
 with open(f) as file:
     file_ = file.read().split(' ')
 line = [int(item) for item in file_]
