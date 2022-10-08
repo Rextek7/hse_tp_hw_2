@@ -1,20 +1,11 @@
-name: my-tests
-
-
-on:
-  push:
-    branches: ["main"]
+name: CI
+    steps :
+      - uses: actions/checkout@v1
       
-jobs:
-  test_my_code:
-    runs-on   : ubuntu-latest
-    steps     :
-      - name   : Git-Clone-my-repo
-        uses   : actions/checkout@v3
-      - run    : |
-         cd $GITHUB_WORKSPACE
-         python3 -m unittest Tests_2.TestCase
-      - name: Telegram Notify
-  # You may pin to the exact commit or the version.
-  # uses: appleboy/telegram-action@ae54341a85fdcf97cbea354678d7b8c062286c15
-        uses: appleboy/telegram-action@0.0.3
+      -name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v1
+       with:
+       python-version: ${{ matrix.python-version }}
+      -name: Install dependecies
+       run: |
+        pip install -r requirements.txt
