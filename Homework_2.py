@@ -1,7 +1,7 @@
 from datetime import datetime
 
 print("Введите название файла:")
-f = Numbers.txt
+f = input()
 with open(f) as file:
     file_ = file.read().split(' ')
 line = [int(item) for item in file_]
