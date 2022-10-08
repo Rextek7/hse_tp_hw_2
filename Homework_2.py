@@ -1,7 +1,7 @@
 from datetime import datetime
 from tqdm import tqdm
 
-f = None
+f = str()
 try:
     print("Введите название файла:")
     f = input()
