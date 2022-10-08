@@ -8,7 +8,8 @@ jobs:
     runs-on   : ubuntu-latest
     steps     :
       - name   : Install tqdm
-      - run    : pip install tqdm
+      - run    : |
+          pip install tqdm
       - name   : Git-Clone-my-repo
         uses   : actions/checkout@v3
       - run    : |
