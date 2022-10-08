@@ -41,16 +41,17 @@ while True:
             _sum = sum(line)
             _del = _sum % 3
             return _del
+        print("Количество чисел:", _at_all(k))
+        print("Минимальное значение:", _min(_mn))
+        print("Максимальное значение:", _max(_mx))
+        print("Общая сумма:", _sum(_sm))
+        print("Произведение всех чисел:", _mult(line))
+        print("Остаток при делении суммы на 3:", _delimost(_del))
+        print(f"Затрачено {abs(datetime.now() - start_time)} ")
     except EOFError:
         break
 
 
-print("Количество чисел:", _at_all(k))
-print("Минимальное значение:", _min(_mn))
-print("Максимальное значение:", _max(_mx))
-print("Общая сумма:", _sum(_sm))
-print("Произведение всех чисел:", _mult(line))
-print("Остаток при делении суммы на 3:", _delimost(_del))
-print(f"Затрачено {abs(datetime.now() - start_time)} ")
+
 
 
