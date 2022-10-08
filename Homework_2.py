@@ -1,5 +1,4 @@
 from datetime import datetime
-from tqdm import tqdm
 
 print("Введите название файла:")
 f = input()
@@ -32,7 +31,7 @@ def _sum(_sm):
 
 def _mult(line):
     _mult = 1
-    for i in tqdm(line):
+    for i in (line):
         _mult = (_mult * i)
     return _mult
 
