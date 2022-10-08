@@ -3,7 +3,7 @@ name: my-tests
 
 on:
   push:
-    branches: ["master"]
+    branches: ["main"]
       
 jobs:
   test_my_code:
