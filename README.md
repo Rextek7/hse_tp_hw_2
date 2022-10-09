@@ -4,7 +4,7 @@
 ## Группа: 226
 my-tests
 Status of Last Deployment:<br>
-<img src -"https://github.com/Rextek7/hse_tp_hw_2/workflows/my-tests/badge.svg?branch=main"><br>
+<img src ="https://github.com/Rextek7/hse_tp_hw_2/workflows/CI/badge.svg?branch=main%22%3E<br>
 ### Правила использования:
 ### 1)Для прогона теста собственного файла, необходимо:
 ####  либо внести изменения уже в сущестующий "Numbers.txt"
