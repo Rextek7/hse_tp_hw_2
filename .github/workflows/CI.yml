@@ -22,7 +22,7 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
             ${{ github.actor }} внес изменения:
-            Внесенные изменения: ${{ github.event.commits[0].message }}
+            Измененный файл: ${{ github.event.commits[0].message }}
             
             Репозиторий: ${{ github.repository }}
             
