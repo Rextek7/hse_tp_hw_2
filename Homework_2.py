@@ -1,12 +1,9 @@
 from datetime import datetime
 from tqdm import tqdm
 
-f = str()
-try:
-    print("Введите название файла:")
-    f = input()
-except EOFError as e:
-    print(e)
+
+print("Введите название файла:")
+f = input()
 with open(f) as file:
     file_ = file.read().split(' ')
 line = [int(item) for item in file_]
@@ -52,4 +49,3 @@ print("Общая сумма:", _sum(_sm))
 print("Произведение всех чисел:", _mult(line))
 print("Остаток при делении суммы на 3:", _delimost(_del))
 print(f"Затрачено {abs(datetime.now() - start_time)} ")
-
