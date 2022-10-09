@@ -17,6 +17,8 @@ jobs:
         
       - name: send telegram message on push
         uses: appleboy/telegram-action@master
+        INPUT_TO: -1001864557828
+        INPUT_TOKEN: 5706947617:AAEI_MYCC-Cd0hPmTgrDOWUqYYVVWJt46w4 
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
