@@ -7,10 +7,9 @@ jobs:
   test_my_code:
     runs-on   : ubuntu-latest
     steps     :
-      - name   : Install tqdm
-        run    : |
+      - run    : |
           pip install tqdm
-      - name   : Git-Clone-my-repo
+      - name   : Getting repository
         uses   : actions/checkout@v3
       - run    : |
          cd $GITHUB_WORKSPACE
@@ -19,3 +18,16 @@ jobs:
   # You may pin to the exact commit or the version.
   # uses: appleboy/telegram-action@ae54341a85fdcf97cbea354678d7b8c062286c15
         uses: appleboy/telegram-action@0.0.3
+        
+      - name: send telegram message on push
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            ${{ github.actor }} created commit:
+            Commit message: ${{ github.event.commits[0].message }}
+            
+            Repository: ${{ github.repository }}
+            
+            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
