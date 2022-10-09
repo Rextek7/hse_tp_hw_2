@@ -3,7 +3,7 @@ from tqdm import tqdm
 
 
 
-f = Numbers.txt
+f = 'Numbers.txt'
 with open(f) as file:
     file_ = file.read().split(' ')
 line = [int(item) for item in file_]
