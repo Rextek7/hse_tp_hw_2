@@ -2,7 +2,6 @@
 
 ## ФИО: Брынзов Юрий Александрович
 ## Группа: 226
-my-tests
 Статус:<br>
 <img src ="https://github.com/Rextek7/hse_tp_hw_2/workflows/my-tests/badge.svg?branch=main"><br>
 ### Правила использования:
