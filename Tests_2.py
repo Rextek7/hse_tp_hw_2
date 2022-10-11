@@ -10,7 +10,7 @@ class TestCase(unittest.TestCase):
         self.assertEqual(test_max, max(Homework_2.line))
 
     def test_minimum(self):
-        test_min = Homework_2._min(len(Homework_2.line))
+        test_min = Homework_2._min(Homework_2.line)
         self.assertEqual(test_min, min(Homework_2.line))
 
     def test_summa(self):
