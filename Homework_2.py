@@ -9,7 +9,8 @@ if os.stat(f).st_size == 0:
     line = None
 else:
     with open(f) as file:
-        file_ = file.read().split(' ')
+        file_1 = file.read().split(' ')
+        file_ = file_1.split('\n')
     line = [int(item) for item in file_]
 
 start_time = datetime.now()
