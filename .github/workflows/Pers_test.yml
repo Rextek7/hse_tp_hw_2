@@ -1,8 +1,25 @@
 name: Try_test_byyourown
-on: repository_dispatch
+on: 
+  workflow_dispatch:
+  
 jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
+    steps     :
+      - run    : |
+          pip install tqdm
+      - name   : Getting repository
+        uses   : actions/checkout@v3
+      - run    : |
+         cd $GITHUB_WORKSPACE
+         python3 -m unittest Tests_2.TestCase
+        
+      - name: send telegram message on push
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+           ${{ github.actor }} выполнил прогон теста:
+           Результат: ${{ github.event.workflow_dispatch }}
