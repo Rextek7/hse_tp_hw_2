@@ -16,8 +16,13 @@ jobs:
          python3 -m unittest Tests_2.TestCase
       - name   : Success
         if: success()
+        uses: appleboy/telegram-action@master
         with:
-            state: 'success'
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+           ${{ github.actor }} выполнил прогон теста:
+           Результат: Success
       - name   : Failure
         if: failure()
         uses: appleboy/telegram-action@master
@@ -27,13 +32,4 @@ jobs:
           message: |
            ${{ github.actor }} выполнил прогон теста:
            Результат: Failure
-      - name   : Success
-        if: success()
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: |
-           ${{ github.actor }} выполнил прогон теста:
-           Результат: Success
          
