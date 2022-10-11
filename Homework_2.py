@@ -1,67 +1,51 @@
 from datetime import datetime
 from tqdm import tqdm
-import os
+
+
 
 f = 'Numbers.txt'
-line = []
+with open(f) as file:
+    file_ = file.read().split(' ')
+line = [int(item) for item in file_]
 
-if os.stat(f).st_size == 0:
-    line = None
-else:
-    with open(f) as file:
-        file_ = file.read().split(' ')
-    line = [int(item) for item in file_]
 
 start_time = datetime.now()
 
 def _at_all(line):
-    if line is None:
-        return None
-    else:
-        return len(line)
+    return len(line)
+
 
 
 def _min(line):
-    if line is None:
-        return None
-    else:
-        _mn = min(line)
-        return _mn
+    _mn = min(line)
+    return _mn
+
 
 
 def _max(line):
-    if line is None:
-        return None
-    else:
-        _mx = max(line)
-        return _mx
+    _mx = max(line)
+    return _mx
+
 
 
 def _sum(line):
-    if line is None:
-        return None
-    else:
-        _sm = sum(line)
-        return _sm
+    _sm = sum(line)
+    return _sm
+
 
 
 def _mult(line):
-    if line is None:
-        return None
-    else:
-        _mult = 1
-        for i in tqdm(line):
-            _mult = (_mult * i)
-        return _mult
+    _mult = 1
+    for i in tqdm(line):
+        _mult = (_mult * i)
+    return _mult
+
 
 
 def _delimost(line):
-    if line is None:
-        return None
-    else:
-        _sum = sum(line)
-        _del = _sum % 3
-        return _del
+    _sum = sum(line)
+    _del = _sum % 3
+    return _del
 
 
 print("Количество чисел:", _at_all(line))
