@@ -1,9 +1,9 @@
 name: my-tests
 on:
-  push:
-    branches: ["main"]
-  workflow_dispatch:
-    
+  repository_dispatch:
+    types:
+      - manual-trigger-my-tests
+      - manual-trigger-all
 jobs:
   test_my_code:
     runs-on   : ubuntu-latest
@@ -28,4 +28,6 @@ jobs:
             Репозиторий: ${{ github.repository }}
             
             Отслеживать изменения: https://github.com/${{ github.repository }}/commit/${{github.sha}}
-    
+            
+
+      
