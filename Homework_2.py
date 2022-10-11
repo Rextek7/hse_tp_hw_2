@@ -17,7 +17,6 @@ def _at_all(line):
 
 
 def _min(line):
-    _mn = 10 ^ 8
     _mn = min(line)
     return _mn
 
