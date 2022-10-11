@@ -1,4 +1,4 @@
-name: Try_test_byyourown
+name: Try_test_by_your_own
 on: 
   workflow_dispatch:
   
@@ -22,4 +22,4 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
            ${{ github.actor }} выполнил прогон теста:
-           Результат: ${{ github.event.workflow_dispatch }}
+           Результат: ${{ github.event.payload }}
