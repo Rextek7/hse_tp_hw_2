@@ -1,7 +1,7 @@
 name: Try_test_by_your_own
 on: 
-  workflow_dispatch:
-  
+  workflow_dispatch:  #Функция из документации github
+  #Дальше все аналогично CI.yml
 jobs:
   test:
     name: Test
