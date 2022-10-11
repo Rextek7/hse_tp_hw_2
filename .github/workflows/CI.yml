@@ -18,7 +18,7 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-           ${{ github.actor }} внес изменения:
+            ${{ github.actor }} внес изменения:
             Измененный файл: ${{ github.event.commits[0].message }}
             
             Репозиторий: ${{ github.repository }}
@@ -34,7 +34,7 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-           ${{ github.actor }} внес изменения:
+            ${{ github.actor }} внес изменения:
             Измененный файл: ${{ github.event.commits[0].message }}
             
             Репозиторий: ${{ github.repository }}
