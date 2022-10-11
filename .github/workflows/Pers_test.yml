@@ -14,6 +14,14 @@ jobs:
       - run    : |
          cd $GITHUB_WORKSPACE
          python3 -m unittest Tests_2.TestCase
+      - name   : Success
+        if: success()
+        with: 
+           state: 'success'
+      - name   : Failure
+        if: failure()
+        with: 
+           state: 'failure'
         
       - name: send telegram message on push
         uses: appleboy/telegram-action@master
