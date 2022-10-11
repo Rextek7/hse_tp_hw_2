@@ -1,5 +1,5 @@
 name: my-tests
-on: [push, fork]
+on: [push, fork] #прогон теста при любом push
 jobs:
   test_my_code:
     runs-on   : ubuntu-latest
@@ -7,15 +7,15 @@ jobs:
       - run    : |
           pip install tqdm
       - name   : Getting repository
-        uses   : actions/checkout@v3
+        uses   : actions/checkout@v3 #считываем весь репозиторий
       - run    : |
          cd $GITHUB_WORKSPACE
          python3 -m unittest Tests_2.TestCase
-      - name   : Success
+      - name   : Success #Проверка на правильность выполнения теста
         if: success()
-        uses: appleboy/telegram-action@master
+        uses: appleboy/telegram-action@master # Строки с 16 по 29 взяты с оф. документации
         with:
-          to: ${{ secrets.TELEGRAM_TO }}
+          to: ${{ secrets.TELEGRAM_TO }} #Токен настроен в Settings - secrets
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
             ${{ github.actor }} внес изменения:
