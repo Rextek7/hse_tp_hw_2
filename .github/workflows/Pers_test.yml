@@ -22,4 +22,4 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
            ${{ github.actor }} выполнил прогон теста:
-           Результат: ${{ github.event.payload }}
+           Результат: ${{ github.deployment_status["state"] }}
