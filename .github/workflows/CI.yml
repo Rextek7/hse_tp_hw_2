@@ -23,7 +23,7 @@ jobs:
             
             Репозиторий: ${{ github.repository }}
 
-            Прогон теста:
+            Прогон теста
             Результат: Success
            
             Отслеживать изменения: https://github.com/${{ github.repository }}/commit/${{github.sha}}
@@ -39,7 +39,7 @@ jobs:
             
             Репозиторий: ${{ github.repository }}
 
-            Прогон теста:
+            Прогон теста
             Результат: Failure
            
             Отслеживать изменения: https://github.com/${{ github.repository }}/commit/${{github.sha}}
