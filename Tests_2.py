@@ -11,8 +11,6 @@ from functools import reduce
 
 class TestCase(unittest.TestCase):
 
-    if os.stat('Numbers.txt').st_size != 0:
-
         def test_01_maximum(self):
             test_max = _max(line)
             self.assertEqual(test_max, max(line))
@@ -32,22 +30,6 @@ class TestCase(unittest.TestCase):
         def test_05_del(self):
             test_delimost = _delimost(line)
             self.assertEqual(test_delimost, sum(line) % 3)
-    else:
-        def test_02_min_on_empty_file(self):
-            self.assertIsNone(_min(line))
-
-        def test_01_max_on_empty_file(self):
-            self.assertIsNone(_max(line))
-
-        def test_03_summ_on_empty_file(self):
-            self.assertIsNone(_sum(line))
-
-        def test_04_mult_on_empty_file(self):
-            self.assertIsNone(_mult(line))
-
-        def test_05_del_on_empty_file(self):
-            self.assertIsNone(_delimost(line))
-
 
 
 if __name__ == '__main__':
