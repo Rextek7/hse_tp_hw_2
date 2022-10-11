@@ -1,9 +1,5 @@
 name: my-tests
-on:
-  repository_dispatch:
-    types:
-      - manual-trigger-my-tests
-      - manual-trigger-all
+on: [push, fork]
 jobs:
   test_my_code:
     runs-on   : ubuntu-latest
