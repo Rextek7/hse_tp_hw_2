@@ -14,14 +14,7 @@ jobs:
       - run    : |
          cd $GITHUB_WORKSPACE
          python3 -m unittest Tests_2.TestCase
-      - name   : Success
-        if: success()
-        with: 
-           state: 'success'
-      - name   : Failure
-        if: failure()
-        with: 
-           state: 'failure'
+
         
       - name: send telegram message on push
         uses: appleboy/telegram-action@master
@@ -30,4 +23,4 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
            ${{ github.actor }} выполнил прогон теста:
-           Результат: ${{ github.deployment_status["state"] }}
+           Результат: ${{ github.status }}
