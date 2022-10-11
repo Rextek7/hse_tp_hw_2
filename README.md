@@ -12,5 +12,5 @@
 ####  https://t.me/+lvUZu_ZrAetmNzQy
 
 ### График зависимости времени от количества значений 
-![image](https://user-images.githubusercontent.com/113045888/194700658-4d49dff4-540e-4d98-a252-f011e7cf63e6.png)
-![image](https://user-images.githubusercontent.com/113045888/194700673-68225687-adcd-456f-9585-cc65527fc0d9.png)
+![image](https://user-images.githubusercontent.com/113045888/195183552-8be8fdf1-8cb5-4dde-a014-89e04bd8f237.png)
+![image](https://user-images.githubusercontent.com/113045888/195183628-549ad06d-25f2-49aa-8c3b-4801ae3b0a02.png)
