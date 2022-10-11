@@ -21,7 +21,7 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-           ${{ github.actor }} выполнил прогон теста:
+           ${{ github.actor }} выполнил прогон теста
            Результат: Success
       - name   : Failure
         if: failure()
@@ -30,6 +30,6 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-           ${{ github.actor }} выполнил прогон теста:
+           ${{ github.actor }} выполнил прогон теста
            Результат: Failure
          
